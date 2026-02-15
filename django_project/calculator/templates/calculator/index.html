@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Рецепт</title>
+</head>
+<body>
+
+<h1>Ингредиенты:</h1>
+
+{% if recipe %}
+    {% for ingredient, amount in recipe.items %}
+        <p>{{ ingredient }}: {{ amount }}</p>
+    {% endfor %}
+{% else %}
+    <p>Рецепт не найден</p>
+{% endif %}
+
+</body>
+</html>
